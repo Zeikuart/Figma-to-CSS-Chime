@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&family=Marcellus+SC&display=swap');
+
+/* Variables */
+:root {
+    --gray-500:  #6B7280;
+    --gray-600: #4B5563;
+    --gray-800: #1F2A37;
+
+    --pink-300: #F8B4D9;
+
+    --blue-50: #EBF5FF;
+    --blue-100: #E1EFFE;
+    --blue-200: #C3DDFD;
+    --blue-300: #A4CAFE;
+    --blue-400: #76A9FA;
+    --blue-500: #5a98fc;
+
+    --yellow-100: #FDF6B2;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main font */
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--blue-50);
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.bottom-Image {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+}
+
+
+/*******-*-*-*-* Header *-*-*-*-*******/
+header {
+    padding: 1.2em 1.6em;
+    background: white;
+    align-items: center;
+}
+
+/* Header Wrapper */
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*------ Brand ------*/
+header .wrapper .brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.8em;
+}
+
+/* Brand Logo */
+header .wrapper .brand svg {
+    width: 40px;
+}
+
+/* Brand Name */
+header .wrapper .brand .brand-name {
+    font-family: 'Marcellus SC', serif;
+    color: var(--gray-600);
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+/*------ CTA ------*/
+header .wrapper .cta-header {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+}
+
+/* Sign in Button */
+header .wrapper .cta-header .primary {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    border-radius: 8px;
+    background: var(--blue-400);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 8px 8px 0px rgba(0, 0, 0, 0.09), 0px 17px 10px 0px rgba(0, 0, 0, 0.05), 0px 31px 12px 0px rgba(0, 0, 0, 0.01), 0px 49px 14px 0px rgba(0, 0, 0, 0.00);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: normal; 
+    z-index: 2;
+    white-space: nowrap;
+}
+
+/* Sign in Button Hover Effect*/
+header .wrapper .cta-header .primary:hover {
+    background: var(--blue-500);
+}
+
+/* Burger Icon */
+header .wrapper .burger {
+    width: 24px;
+    color: var(--gray-800);
+}
+
+/* Display navigation */
+header .wrapper .navigation {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 7em;
+    background: white;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 1em 1em;
+    z-index: 1;
+    
+}
+
+/* Trigger */
+header .wrapper .navigation.open {
+    display: initial;
+}
+
+header .wrapper .navigation ul li {
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Nav Items */
+header .wrapper .navigation ul li a {
+    text-decoration: none;
+    color: var(--gray-500);
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+
+header .wrapper .navigation ul li a.active {
+    color: var(--blue-400);
+} 
+
+/*******-*-*-*-* Main *-*-*-*-*******/
+main {
+    padding: 0 1.6em;
+    margin-top: 3.6em;
+}
+
+/*------- Hero Section ------*/
+main .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.2em;
+}
+
+/* Text */
+main .hero .left-section {
+    width: 100%;
+    position: relative;
+}
+
+/* Headline */
+main .hero .left-section h1{
+    color: var(--gray-800);
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* Sub Headline */
+main .hero .left-section p {
+    color: var(--gray-800);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+    margin-top: 1.6rem;
+}
+
+/* Image */
+main .right-section img {
+    width: 100%;
+}
+
+main .left-section .cta-buttons {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 2.8em;
+}
+
+/* Get started Button */
+main .left-section .cta-buttons a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    border-radius: 8px;
+    background: var(--blue-400);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 8px 8px 0px rgba(0, 0, 0, 0.09), 0px 17px 10px 0px rgba(0, 0, 0, 0.05), 0px 31px 12px 0px rgba(0, 0, 0, 0.01), 0px 49px 14px 0px rgba(0, 0, 0, 0.00);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: normal; 
+}
+
+/* Get started Button Hover Effect*/
+main .left-section .cta-buttons a:hover {
+    background: var(--blue-500);
+}
+
+/*******-*-*-*-* Cards *-*-*-*-*******/
+
+/* Card container */
+main .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4em;
+}
+
+/* Card */
+main .card {
+    background: white;
+    padding: 2.4em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    border-radius: 8px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05), 0px 2px 4px 0px rgba(0, 0, 0, 0.05), 0px 7px 7px 0px rgba(0, 0, 0, 0.04), 0px 16px 9px 0px rgba(0, 0, 0, 0.03), 0px 28px 11px 0px rgba(0, 0, 0, 0.01), 0px 44px 12px 0px rgba(0, 0, 0, 0.00);
+}
+
+main .card1 {
+    border-bottom: 3px solid var(--pink-300);
+}
+
+main .card1 .bg-icon {
+    background: var(--pink-300);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    background: var(--pink-300);
+    box-shadow: 0px 0px 0px 0px rgba(248, 180, 217, 0.10), 0px 1px 2px 0px rgba(248, 180, 217, 0.10), 0px 4px 4px 0px rgba(248, 180, 217, 0.09), 0px 8px 5px 0px rgba(248, 180, 217, 0.05), 0px 14px 6px 0px rgba(248, 180, 217, 0.01), 0px 22px 6px 0px rgba(248, 180, 217, 0.00);
+    width: 48px;
+    height: 48px;
+}
+
+main .card2 {
+    border-bottom: 3px solid var(--yellow-100);
+}
+
+main .card2 .bg-icon {
+    background: var(--yellow-100);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    background: var(--);
+    box-shadow: 0px 0px 0px 0px rgba(248, 180, 217, 0.10), 0px 1px 2px 0px rgba(248, 180, 217, 0.10), 0px 4px 4px 0px rgba(248, 180, 217, 0.09), 0px 8px 5px 0px rgba(248, 180, 217, 0.05), 0px 14px 6px 0px rgba(248, 180, 217, 0.01), 0px 22px 6px 0px rgba(248, 180, 217, 0.00);
+    width: 48px;
+    height: 48px;
+}
+
+main .card3 {
+    border-bottom: 3px solid var(--blue-200);
+}
+
+main .card3 .bg-icon {
+    background: var(--blue-200);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    background: var(--);
+    box-shadow: 0px 0px 0px 0px rgba(248, 180, 217, 0.10), 0px 1px 2px 0px rgba(248, 180, 217, 0.10), 0px 4px 4px 0px rgba(248, 180, 217, 0.09), 0px 8px 5px 0px rgba(248, 180, 217, 0.05), 0px 14px 6px 0px rgba(248, 180, 217, 0.01), 0px 22px 6px 0px rgba(248, 180, 217, 0.00);
+    width: 48px;
+    height: 48px;
+}
+
+/* Card Icon */
+main .card svg {
+    width: 48px;
+}
+
+main .card .details span  {
+    color: var(--gray-800);
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+main .card .details p {
+    color: var(--gray-600);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-top: 0.8rem;
+}
+
+footer {
+    width: auto;
+    height: 12em;
+}
+
+/******-*-*-*- Media Queries -*-*-*-*-*****/
+@media only screen and (min-width: 600px) {
+    /* Header */
+    header {
+        padding: 1.2em 2.4em;
+    }
+
+    /* Main */
+    main {
+        padding: 0 2.4em;
+        margin-top: 4em;
+    }
+
+    /* Headline */
+    main .hero .left-section h1{
+        font-size: 5.2rem;
+    }
+
+    /* Sub Headline */
+    main .hero .left-section p {
+        font-size: 1.8rem;
+    }
+
+    /* Card Paragraph */
+    main .card .details p {
+        font-size: 1.6rem;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) {
+    /* Header */
+    header .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Burger Icon */
+    header .wrapper .burger {
+        display: none;
+    }
+
+    /* Options */
+    header .wrapper .nav-options {
+        display: flex;
+        align-items: center;
+        gap: 2.4em;
+    }
+
+    /* Display navigation */
+    header .wrapper .navigation {
+        display: initial;
+        background: white;
+        position: static;
+        padding: 0;
+    }
+
+    header .wrapper .navigation ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 2.4em; 
+    }
+
+    /* Nav Items */
+    header .wrapper .navigation ul li a:hover {
+        color: var(--blue-300);
+    }
+    /* Main */
+    main {
+        margin-top: 4em;
+    }
+    /* Hero */
+    main .hero {
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    /* Card container */
+    main .cards {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        gap: 2.4em;
+    }
+
+    main .card {
+        width: 100%;
+    }
+    /* Bottom Image */
+    .bottom-Image {
+        /* position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%); */
+        width: 100%;
+    }
+
+    footer {
+        height: 12.7em;
+    }
+}
